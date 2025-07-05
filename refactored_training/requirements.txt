@@ -1,0 +1,29 @@
+# Core HuggingFace packages
+transformers>=4.35.0
+datasets>=2.14.0
+tokenizers>=0.15.0
+
+# Training and optimization
+torch>=2.0.0
+accelerate>=0.24.0
+
+# Experiment tracking and monitoring
+wandb>=0.16.0
+tensorboard>=2.15.0
+
+# Hyperparameter optimization
+optuna>=3.4.0
+
+# Data processing and utilities
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Optional: Flash Attention (if available)
+# flash-attn>=2.0.0
+
+# Optional: Advanced optimizations
+# deepspeed>=0.11.0

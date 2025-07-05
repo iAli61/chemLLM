@@ -1,0 +1,2 @@
+[console_scripts]
+chemllm-config = chemllm.core.cli:main

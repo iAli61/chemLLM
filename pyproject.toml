@@ -20,6 +20,7 @@ dependencies = [
     "rensa>=0.2.7",
     "semhash>=0.3.0",
     "thop>=0.1.1.post2209072238",
+    "transformers>=4.53.1",
 ]
 
 [project.optional-dependencies]

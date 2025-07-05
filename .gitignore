@@ -2,3 +2,15 @@ uv.lock
 .env
 *.pyc
 *.pth
+refactored_training/examples/*.json
+refactored_training/examples/*/*.json
+refactored_training/examples/*/*/*.json
+refactored_training/examples/*/*/*/*.json
+*.bin
+*.pt
+*.safetensors
+refactored_training/examples/*/*.txt
+refactored_training/examples/*/*/*.txt
+refactored_training/examples/*/*/*/*.txt
+refactored_training/examples/training_dashboard.png
+

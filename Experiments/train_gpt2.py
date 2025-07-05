@@ -108,6 +108,7 @@ def create_dataloader(dataset,
                       batch_size=batch_size, 
                       drop_last=drop_last,
                       shuffle=shuffle,
+                      pin_memory=True,
                       )
 
 
@@ -263,6 +264,7 @@ def train_model_simple(model, train_loader, val_loader, optimizer, device, num_e
     print(f"Total tokens processed: {tokens_seen:,}")
     print(f"Average tokens/sec: {avg_tokens_per_sec:.0f}")
     print(f"Total steps: {global_step + 1}")
+    
 
     return train_losses, val_losses, track_tokens_seen
 
@@ -294,9 +296,9 @@ def generate_and_print_sample(model, tokenizer, device, start_context):
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = GPT2(GPT_CONFIG_124M)
 model.to(device)
-optimizer = torch.optim.AdamW(model.parameters(), lr=0.0004, weight_decay=0.1)
+optimizer = torch.optim.AdamW(model.parameters(), lr=0.0004, weight_decay=0.1, fused=None)
 
-num_epochs = 10
+num_epochs = 1
 train_losses, val_losses, tokens_seen = train_model_simple(
     model, train_loader, val_loader, optimizer, device,
     num_epochs=num_epochs, eval_freq=5, eval_iter=5,
